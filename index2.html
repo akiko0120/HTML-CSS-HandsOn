@@ -1,0 +1,93 @@
+<!-- はじめに宣言をします -->
+<!DOCTYPE html>
+<!-- 言語の設定をします -->
+<html lang="ja">
+
+<head>
+    <!-- 空要素になる際は、半角＋/を最後に付ける-->
+    <meta charset="utf-8" />
+    <title>自己紹介</title>
+    <!-- 基本はdescriptionと記述する。content内は、web検索の際にタイトルの下に紹介文として表示される。あまり短いとブラウザ側から省略されるらしい。-->
+    <meta name="description" content="初めて作成した自己紹介サイトです。" />
+    <!-- 以下のmeta nameは、HPをスマートフォン端末に対応させる際、viewportと記述し、その後のcontentにデバイス幅を指定する  -->
+    <meta name="view port" content="width=device-width, initial-scale=1">
+    <!-- CSSファイルの適用をする。hrefで、リンク先の場所を指定する -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- div同士を区別するために、classを追記し名前を付ける-->
+    <div class="page-wrapper">
+        <header class="header">
+            <!-- 画像を入れます。img srcの後に、画像のリンク先。altの後に、画像が表示されなかった場合の説明分。classの後に、画像の位置調整の指定。-->
+            <img src="Answer\img\logo.png" alt="ロゴ" class="header-logo" />
+            <!-- navは、文書内の主要なナビゲーションのセクションを表す　-->
+            <nav>
+                <ul>
+                <!-- a href="#"は、内部リンクを表す。-->
+                    <li><a href="#profile">Profile</a></li>
+                    <li><a href="#articles">Articles</a></li>
+                </ul>
+            </nav>   
+        </header>
+
+    <!-- main は、ページ内の主要なコンテンツを囲むために使用される。body 内で一回しか使用できない。-->
+    <main class="main-content">
+        <!-- メインビジュアル-->
+        <img src="Answer\img\main_visual.jpg" alt="メインの画像" class="main-visual">
+        <!-- プロフィールセクション　-->
+        <section class="section" id="profile">
+            <!-- class の前に、h2 とフォントサイズを指定することもできる-->
+            <h2 class="section title">Profile</h2>
+            <div class="profile">
+                <img src="Answer/img/profile.png" alt="プロフィール写真" class="profile-image" />
+                <div class="profike-info">
+                    <h3>佐々木　晃子</h3>
+                    <!-- pタグは、段落ごとに使用する-->
+                    <p>
+                        出身：　秋田県<br>
+                        趣味：　おいしいご飯を食べる、友達と交流する<br>
+                        主な仕事：　コンサルタントのアシスタント<br>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 記事セクション　-->
+        <section class="section" id="articles">
+            <!-- 白井先生に、以下２つのclassを記述する意味を教えてもらう　-->
+            <h2 class="section title">Articles</h2>
+            <div class="articles">
+                <div class="article">
+                    <img src="Answer\img\article.jpg" alt="サムネイル" class="article-image" />
+                    <h3>記事のタイトル</h3>
+                    <p>こんな記事を書きました。一つ目です。</p>
+                </div>
+                <div class="article">
+                    <img src="Answer\img\article.jpg" alt="サムネイル" class="article-image" />
+                    <h3>記事のタイトル</h3>
+                    <p>こんな記事を書きました。一つ目です。</p>
+                </div>
+                <div class="article">
+                    <img src="Answer\img\article.jpg" alt="サムネイル" class="article-image" />
+                    <h3>記事のタイトル</h3>
+                    <p>こんな記事を書きました。一つ目です。</p>
+                </div>
+                <div class="article">
+                    <img src="Answer\img\article.jpg" alt="サムネイル" class="article-image" />
+                    <h3>記事のタイトル</h3>
+                    <p>こんな記事を書きました。一つ目です。</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- フッター　-->
+    <footer class="footer">
+        <p>&copy; 2025 profile</p>
+    </footer>
+
+</body>
+
+</html>
